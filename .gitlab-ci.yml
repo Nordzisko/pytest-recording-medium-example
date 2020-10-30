@@ -1,0 +1,9 @@
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - apk add --update --no-cache build-base python3-dev py-pip py3-setuptools
+    - python3 -m pip install -r requirements.txt
+    - pytest
